@@ -126,8 +126,48 @@ Ainsi, le temps de demi-vie de la réaction avec k=0.001 est égal à celui de l
 
 * k = 0.001  
   ![k=0.001](figures/q11_001.png)
-  
+
 * k = 0.002  
   ![k=0.002](figures/q11_002.png)
 
 La différence entre cette simulation stochastique et celle effectuée avec ma propre implémentation est justement celle retrouvée avec la simulation effectuée en **question 10**.
+
+# Question 12
+
+Le nombre de molécules de X et Y va rester stable dans le temps, avec les 3 vitesses égales.  
+Par contre, si k_repr est supérieure aux 2 autres, il y aura une augmentation constante de X au court du temps. Y sera toujours au même point.  
+Si k_chas est supérieure aux 2 autres, il y aura une augmentation constante de Y au court du temps. X sera toujours au même point.  
+Au contraire, si k_mour est supérieure aux 2 autres, Y va tendre vers 0, et il n'y aura plus qu'une augmentation constante de X au cours du temps.
+
+# Question 13
+
+Voici une capture de la simulation:
+
+![Q13](figures/q13.png)
+
+Nous voyons une grande variation du nombre des particules concernant les espèces X et Y.  
+Cette grande variation n'est pas reconnue dans les comportements décrits dans la précédente question.
+
+# Question 14
+
+Voici une capture de la simulation:
+
+![Q14](figures/q14.png)
+
+Un orbite correspond à un cycle de vie Proie/Prédateur.  
+Il monte (montée de X, la proie), il est stable et la quantité des proies diminue (montée de Y, les prédateurs), et revient vers l'état initial car il n'y a presque plus de proies, et les prédateurs commencent à mourir.
+
+# Question 15
+
+On retrouve 2 choses:
+* soit les prédateurs meurent et les proies prennent le pouvoir,
+* soit il y a un cycle jusqu'à ce que les proies meurent, et donc les prédateurs meurent à la suite, étant donné qu'ils ne peuvent plus rien "manger".
+
+![Écosystème stable](figures/q15_stable.png)
+
+![Écosystème stable](figures/q15_chaotique.png)
+
+# Question 16
+
+L'écosystème est, principalement, stable. Ainsi, il serai préférable de tendre vers une simulation déterministe pour ce système (Proie/Prédateur), et non pas stochastique qui tend vers un environnement chaotique.  
+Quant au système proposé dans la Q3, il serai beaucoup plus préférable d'utiliser une simulation déterministe, étant donné que la simulation stochastique prendra bien plus de temps de calcul.
