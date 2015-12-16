@@ -1,4 +1,10 @@
-# Question 1
+# Rapport COPASI
+
+## Auteur
+
+Carette Antonin
+
+### Question 1
 
 * 10
   * Temps: 00.02 secondes  
@@ -16,7 +22,7 @@
   * Temps : 8:06.73 minutes
   ![Temps à 1000000](figures/q1_1000000.png)
 
-# Question 2
+### Question 2
 
 * A(0) = 10
   * *t** = 7
@@ -30,11 +36,11 @@
 Ainsi, *t* ne varie pas pour des réactions dont le nombre de molécules varie.
 *t* est ainsi **constant** en nombre de molécules.
 
-# Question 3
+### Question 3
 
 Le temps de calcul est **exponentiel**. Ainsi, il serai comparable au nombre de molécules d'*H2O* présents dans 1L d'eau.
 
-# Question 4
+### Question 4
 
 Pour un nombre de molécules de 10⁵, voici une trace de la courbe.  
 
@@ -47,7 +53,7 @@ Pour un nombre de molécules de 10⁵, voici une trace de la courbe.
 Nous remarquons que nous pouvons diviser par 2 le temps mis en oeuvre afin de d'arriver à A(0)/2, en multipliant la vitesse par 2.  
 Ainsi, **la vitesse de réaction influe directement sur l'obtention du temps de "demi-vie de la réaction"**
 
-# Question 5
+### Question 5
 
 * E = 10  
   ![E=10](figures/q5_100000_10.png)
@@ -60,7 +66,7 @@ Ainsi, **la vitesse de réaction influe directement sur l'obtention du temps de 
 
 Pour la dernière figure, le nombre de molécules pour les espèces *E* et *P* sont à 0.
 
-# Question 6
+### Question 6
 
 Voici les temps associés aux simulations:
 
@@ -75,16 +81,16 @@ Voici les temps associés aux simulations:
 
 Ainsi, COPASI détient une meilleure implémentation que le programme Python écrit.
 
-# Question 7
+### Question 7
 
 Oui, il y a toujours une concordance avec *t* = 7.
 
-# Question 8
+### Question 8
 
 Non plus, car le temps sera toujours exponentiel.  
 Par contre, ce sera toujours mieux que d'utiliser mon programme Python...
 
-# Question 9
+### Question 9
 
 Voici les comparaisons concernant les courbes entre la question 6 et la question 9:
 
@@ -111,7 +117,7 @@ Voici les comparaisons concernant les courbes entre la question 6 et la question
 On voit ainsi que la réaction a tendance a allé moins vite vers le 0 que pour la méthode directe.  
 La différence entre les 2 méthodes est que le **tau-leaping** est une approximation de la méthode directe de Gillespie, prenant en compte des intervalles de temps plus grands que ceux calculés avec la méthode exacte, car approximé. Cela permet ainsi de consommer moins de temps à calculer les *tau*, et donc d'économiser du temps de calcul.
 
-# Question 10
+### Question 10
 
 * k = 0.001  
   ![k=0.001](figures/q10_001.png)
@@ -122,7 +128,7 @@ La différence entre les 2 méthodes est que le **tau-leaping** est une approxim
 On pourra remarquer que, par rapport aux figures effectués dans l'exercice 4, les temps de demi-vie sont divisés par 2.  
 Ainsi, le temps de demi-vie de la réaction avec k=0.001 est égal à celui de la réaction à k=0.002 pour l'exercice 4; et le temps de demi-vie de la réaction avec k=0.002 est égal à celui de la réaction à k=0.002, divisé par 2.
 
-# Question 11
+### Question 11
 
 * k = 0.001  
   ![k=0.001](figures/q11_001.png)
@@ -132,14 +138,14 @@ Ainsi, le temps de demi-vie de la réaction avec k=0.001 est égal à celui de l
 
 La différence entre cette simulation stochastique et celle effectuée avec ma propre implémentation est justement celle retrouvée avec la simulation effectuée en **question 10**.
 
-# Question 12
+### Question 12
 
 Le nombre de molécules de X et Y va rester stable dans le temps, avec les 3 vitesses égales.  
 Par contre, si k_repr est supérieure aux 2 autres, il y aura une augmentation constante de X au court du temps. Y sera toujours au même point.  
 Si k_chas est supérieure aux 2 autres, il y aura une augmentation constante de Y au court du temps. X sera toujours au même point.  
 Au contraire, si k_mour est supérieure aux 2 autres, Y va tendre vers 0, et il n'y aura plus qu'une augmentation constante de X au cours du temps.
 
-# Question 13
+### Question 13
 
 Voici une capture de la simulation:
 
@@ -148,7 +154,7 @@ Voici une capture de la simulation:
 Nous voyons une grande variation du nombre des particules concernant les espèces X et Y.  
 Cette grande variation n'est pas reconnue dans les comportements décrits dans la précédente question.
 
-# Question 14
+### Question 14
 
 Voici une capture de la simulation:
 
@@ -157,7 +163,7 @@ Voici une capture de la simulation:
 Un orbite correspond à un cycle de vie Proie/Prédateur.  
 Il monte (montée de X, la proie), il est stable et la quantité des proies diminue (montée de Y, les prédateurs), et revient vers l'état initial car il n'y a presque plus de proies, et les prédateurs commencent à mourir.
 
-# Question 15
+### Question 15
 
 On retrouve 2 choses:
 * soit les prédateurs meurent et les proies prennent le pouvoir,
@@ -167,7 +173,61 @@ On retrouve 2 choses:
 
 ![Écosystème stable](figures/q15_chaotique.png)
 
-# Question 16
+### Question 16
 
 L'écosystème est, principalement, stable. Ainsi, il serai préférable de tendre vers une simulation déterministe pour ce système (Proie/Prédateur), et non pas stochastique qui tend vers un environnement chaotique.  
 Quant au système proposé dans la Q3, il serai beaucoup plus préférable d'utiliser une simulation déterministe, étant donné que la simulation stochastique prendra bien plus de temps de calcul.
+
+### Question 17
+
+Le système est stable; chaque espèce va perdre une unité et la retrouver par la suite, et retrouvera donc son intégrité.
+
+### Question 18
+
+La loi est : **C + A + B**.
+
+### Question 19
+
+Il s'agit d'un comportement *Proie/Prédateur*, comme rencontré à la question 13.
+
+![Q19](figures/q19.png)
+
+### Question 20
+
+L'échelle de temps ne nous permet pas de savoir s'il s'agit bien d'un système *Proie/Prédateur*. Pour le déterminer, il nous faudrai accentuer cette échelle.
+
+![Q20](figures/q20.png)
+
+### Question 21
+
+L'échelle de temps est bonne, et nous permet bien de confirmer qu'il s'agit bien d'un système *Proie/Prédateur*.
+
+![Q21](figures/q21.png)
+
+### Question 22
+
+Ici, l'on voit que l'équilibre dès le départ pour chaque espèce est préservé au court du temps, ce qui explique l'équilibre pour chaque espèce à 50 particules.
+
+![Q22](figures/q22.png)
+
+### Question 23
+
+Étant donné que le modèle est stochastique, les réactions pourront être prises dans le désordre, et donc favoriser certaines, au détriment des autres.  
+Ici, 2 espèces disparaissent, au profit d'une autre espèce.
+
+![Q23](figures/q23.png)
+
+### Question 24
+
+![Q24](figures/q24.png)
+
+### Question 25
+
+Dans cet histogramme, on voit que l'on a pour 33.3% des exemples 150 molécules, et 66.6% des exemples à 0 molécules.  
+Dans cet environnement, nous avons 3 espèces. Ainsi, il y a 33,3% de chance que A survive, et donc prend la totalité de l'espace de l'environnement.
+
+![Q25](figures/q25.png)
+
+### Question 26
+
+Ici, le modèle déterministe correspond à la réalité. En effet, on pourra s'approcher de ce cas si l'on le considère comme une représentation moyenne du modèle stochastique.  
